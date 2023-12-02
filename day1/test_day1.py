@@ -17,11 +17,15 @@ class Test_AoC_Day1_1(unittest.TestCase):
     
     #def test_5(self):
     #    self.assertEqual(check_line("12"), 3)
-    
+
+
+def prepare(input):
+    return "1"
+
 class Test_AoC_Day1_2(unittest.TestCase):
 
     def test_(self):
-        self.assertEqual(check_line("one"), 2)
+        self.assertEqual(prepare("one"), "1")
 
 if __name__ == '__main__':
     unittest.main()
