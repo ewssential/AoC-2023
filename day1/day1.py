@@ -1,19 +1,19 @@
-def isDigit(str):
-    if str.isdigit():
-        return int(str)
+def isDigit(input):
+    if input.isdigit():
+        return int(input)
     return 0
 
-def iterate(str):
+def iterate(input):
     # TODO: how to optimize that?
-    for c in str:
+    for c in input:
         check = isDigit(c)
         if check == 0:
             continue
         return check
     return 0
 
-def check_line(str):
-    return iterate(str) + iterate(str[::-1])
+def check_line(input):
+    return int(str(iterate(input)) + str(iterate(input[::-1])))
 
 
 def day11():
