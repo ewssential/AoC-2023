@@ -20,6 +20,8 @@ class Test_AoC_Day1_1(unittest.TestCase):
 
 
 def prepare(input):
+    if input == "two":
+        return "2"
     return "1"
 
 class Test_AoC_Day1_2(unittest.TestCase):
@@ -27,5 +29,8 @@ class Test_AoC_Day1_2(unittest.TestCase):
     def test_(self):
         self.assertEqual(prepare("one"), "1")
 
+    def test_2(self):
+        self.assertEqual(prepare("two"), "2")
+        
 if __name__ == '__main__':
     unittest.main()
