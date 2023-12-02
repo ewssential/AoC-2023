@@ -1,5 +1,5 @@
 import unittest
-from day1 import check_line 
+from day1 import check_line, prepare 
 
 class Test_AoC_Day1_1(unittest.TestCase):
     def test_(self):
@@ -14,22 +14,8 @@ class Test_AoC_Day1_1(unittest.TestCase):
     def test_4(self):
         self.assertEqual(check_line("12"), 12)
 
-numbers = dict(
-    one = "1",
-    two= "2",
-    three= "3",
-    four= "4",
-    five= "5",
-    six= "6",
-    seven= "7",
-    eight= "8",
-    nine= "9"
-)
 
-def prepare(s):
-    for k in range(len(numbers)):
-        s = s.replace(list(numbers.keys())[k], list(numbers.values())[k])
-    return s
+
 
 class Test_AoC_Day1_2(unittest.TestCase):
 
