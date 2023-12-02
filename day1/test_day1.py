@@ -19,12 +19,13 @@ class Test_AoC_Day1_1(unittest.TestCase):
     #    self.assertEqual(check_line("12"), 3)
 
 thisdict = {
-  "one": 1,
-  "two": 2,
-  "three": 3
+  "one": "1",
+  "two": "2",
+  "three": "3"
 }
 
 def prepare(input):
+    return thisdict[input]
     if input == "three":
         return "3"
     if input == "two":
