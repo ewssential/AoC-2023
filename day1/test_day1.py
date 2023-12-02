@@ -27,10 +27,9 @@ numbers = dict(
 )
 
 def prepare(s):
-    if s == "oneone":
-        return s.replace(list(numbers.keys())[0], list(numbers.values())[0])
-        return a
-    return numbers[s]
+    for k in range(len(numbers)):
+        s = s.replace(list(numbers.keys())[k], list(numbers.values())[k])
+    return s
 
 class Test_AoC_Day1_2(unittest.TestCase):
 
@@ -45,8 +44,12 @@ class Test_AoC_Day1_2(unittest.TestCase):
         self.assertEqual(prepare("eight"), "8")
         self.assertEqual(prepare("nine"), "9")
 
-    def test_1(self):
+    def test_prepare(self):
         self.assertEqual(prepare("oneone"), "11")
+        self.assertEqual(prepare("twotwo"), "22")
+        self.assertEqual(prepare("onetwo"), "12")
+        self.assertEqual(prepare("1onetwo"), "112")
+        self.assertEqual(prepare("1oetwo"), "1oe2")
 
 
 if __name__ == '__main__':
