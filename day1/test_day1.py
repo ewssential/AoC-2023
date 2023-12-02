@@ -18,8 +18,15 @@ class Test_AoC_Day1_1(unittest.TestCase):
     #def test_5(self):
     #    self.assertEqual(check_line("12"), 3)
 
+thisdict = {
+  "one": 1,
+  "two": 2,
+  "three": 3
+}
 
 def prepare(input):
+    if input == "three":
+        return "3"
     if input == "two":
         return "2"
     return "1"
@@ -31,6 +38,7 @@ class Test_AoC_Day1_2(unittest.TestCase):
 
     def test_2(self):
         self.assertEqual(prepare("two"), "2")
+        self.assertEqual(prepare("three"), "3")
         
 if __name__ == '__main__':
     unittest.main()
