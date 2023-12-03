@@ -1,13 +1,13 @@
-numbers = dict(
-    one = "1",
-    two= "2",
-    three= "3",
-    four= "4",
-    five= "5",
-    six= "6",
-    seven= "7",
+numbers = dict (
     eight= "8",
-    nine= "9"
+    nine= "9",
+    seven= "7",
+    six= "6",
+    five= "5",
+    four= "4",
+    three= "3",
+    two= "2",
+    one = "1",
 )
 
 def isDigit(input):
@@ -34,12 +34,20 @@ def prepare(s):
     return s
 
 def day11():
-    f = open("input.txt", "r")
+    f = open("./input.txt", "r")
     count = 0
     for line in f:
         count = count + check_line(line)
     print(count)
-    
+
+
+def day12():
+    f = open("./input.txt", "r")
+    count = 0
+    for line in f:
+        count = count + check_line(prepare(line))
+    print(count)
     
 if __name__ == '__main__':
     day11()
+    day12()
